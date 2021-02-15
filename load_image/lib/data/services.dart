@@ -15,7 +15,7 @@ class ServicesImp implements Services {
       final response = await http.get(url);
       return 200 == response.statusCode
           ? parseJsonToPhotoData(response.body)
-          : throw Exception();
+          : List<PhotoData>();
     } catch (e) {
       throw Exception();
     }
